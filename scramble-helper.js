@@ -1,12 +1,34 @@
+"use strict"
 // Create a function that reverses a word
+function reverseWord(word){
+
+
+	return word.split("").reverse().join('');
+
+}
 
 // Create a function that takes an array of words and returns a new array of the
  // words with each word reversed.
+let arrayOfWords = ['melon', 'hate', 'stop', 'immediately']
+
+function reverseWordsArray(wordsArray){
+	let reversedArray = []
+	for (let i = 0; i < wordsArray.length; i++){
+		reversedArray.push(reverseWord(wordsArray[i]));
+	}
+	return reversedArray;
+}
 
 // Create a function that returns a random word from an array
+function randomWordFromArray(wordArray){
+
+	return wordArray[Math.floor(Math.random()*wordArray.length)];
+
+}
 
 // Create an array of words and save it to a variable. Using your functions create
 // a second array of reversed words.
+let reversedArrayOfWords = reverseWordsArray(arrayOfWords)
 
 // We could use the two arrays we've created to select a random word to show the user
 // and check their guess. How could we do that? Is there a better way?
